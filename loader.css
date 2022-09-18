@@ -1,0 +1,482 @@
+body{
+    animation: colorchange 5.6s linear infinite;
+}
+.bdy{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.year{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.pallette{
+    padding-top: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.5rem;
+}
+.pallette img{
+    width:50%
+}
+.ref::before {
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    content: "1905";
+    animation: colorchange 5.6s linear infinite;
+    background-color: none;
+  }
+
+@keyframes colorchange{
+    0%{
+        background-color: #c2caf9;
+        content: "1905";
+    }
+    0.893%{
+        background-color: #d1d7fb;
+        content: "1906";
+    }
+    1.786%{
+        background-color: #b2bcfa;
+        content: "1907";
+    }
+    2.679%{
+        background-color: #a3aff9;
+        content: "1908";
+    }
+    3.572%{
+        background-color: #a8b2fa;
+        content: "1909";
+    }
+    4.465%{
+        background-color: #b0b9fa;
+        content: "1910";
+    }
+    5.358%{
+        background-color: #a4b0fa;
+        content: "1911";
+    }
+    6.251%{
+        background-color: #a8b2fa;
+        content: "1912";
+    }
+    7.144%{
+        background-color: #bcc5fc;
+        content: "1913";
+    }
+    8.037%{
+        background-color: #e1e6fc;
+        content: "1914";
+    }
+    8.93%{
+        background-color: #eff1fe;
+        content: "1915";
+    }
+    9.823%{
+        background-color: #c0cafb;
+        content: "1916";
+    }
+    10.716%{
+        background-color: #bdc7fc;
+        content: "1917";
+    }
+    11.609%{
+        background-color: #d4dafe;
+        content: "1918";
+    }
+    12.502%{
+        background-color: #d4dafc;
+        content: "1919";
+    }
+    13.395%{
+        background-color: #d2d8fc;
+        content: "1920";
+    }
+    14.288%{
+        background-color: #dfe3fe;
+        content: "1921";
+    }
+    15.181%{
+        background-color: #cdd5fc;
+        content: "1922";
+    }
+    16.074%{
+        background-color: #d2d8fc;
+        content: "1923";
+    }
+    16.967%{
+        background-color: #cbd3fa;
+        content: "1924";
+    }
+    17.86%{
+        background-color: #e0e5ff;
+        content: "1925";
+    }
+    18.753%{
+        background-color: #f1f3ff;
+        content: "1926";
+    }
+    19.646%{
+        background-color: #e0e4ff;
+        content: "1927";
+    }
+    20.539%{
+        background-color: #dadfff;
+        content: "1928";
+    }
+    21.432%{
+        background-color: #bfcbfd;
+        content: "1929";
+    }
+    22.325%{
+        background-color: #eaedff;
+        content: "1930";
+    }
+    23.218%{
+        background-color: #f0f2fe;
+        content: "1931";
+    }
+    24.111%{
+        background-color: #e8e7fe;
+        content: "1932";
+    }
+    25.004%{
+        background-color: #cfd2fd;
+        content: "1933";
+    }
+    25.897%{
+        background-color: #eaedff;
+        content: "1934";
+    }
+    26.79%{
+        background-color: #e4e6fd;
+        content: "1935";
+    }
+    27.683%{
+        background-color: #e7eafd;
+        content: "1936";
+    }
+    28.576%{
+        background-color: #fcfbff;
+        content: "1937";
+    }
+    29.469%{
+        background-color: #faf9ff;
+        content: "1938";
+    }
+    30.362%{
+        background-color: #fbfcff;
+        content: "1939";
+    }
+    31.255%{
+        background-color: #ffeae7;
+        content: "1940";
+    }
+    32.148%{
+        background-color: #ffd4cd;
+        content: "1941";
+    }
+    33.041%{
+        background-color: #fddcd3;
+        content: "1942";
+    }
+    33.934%{
+        background-color: #ffddd4;
+        content: "1943";
+    }
+    34.827%{
+        background-color: #ffbdae;
+        content: "1944";
+    }
+    35.72%{
+        background-color: #ffd8d1;
+        content: "1945";
+    }
+    36.613%{
+        background-color: #fefefe;
+        content: "1946";
+    }
+    37.506%{
+        background-color: #f4f7fe;
+        content: "1947";
+    }
+    38.399%{
+        background-color: #f6f6fe;
+        content: "1948";
+    }
+    39.292%{
+        background-color: #f5f5fd;
+        content: "1949";
+    }
+    40.185%{
+        background-color: #dee4fe;
+        content: "1950";
+    }
+    41.078%{
+        background-color: #fdfeff;
+        content: "1951";
+    }
+    41.908%{
+        background-color: #fff8f6;
+        content: "1952";
+    }
+    42.801%{
+        background-color: #fee9e4;
+        content: "1953";
+    }
+    43.694%{
+        background-color: #e8e9fb;
+        content: "1954";
+    }
+    44.587%{
+        background-color: #e5e8fb;
+        content: "1955";
+    }
+    45.48%{
+        background-color: #d8ddfd;
+        content: "1956";
+    }
+    46.373%{
+        background-color: #fff4f0;
+        content: "1957";
+    }
+    47.266%{
+        background-color: #fee5e0;
+        content: "1958";
+    }
+    48.159%{
+        background-color: #fff1f0;
+        content: "1959";
+    }
+    49.052%{
+        background-color: #fffaf7;
+        content: "1960";
+    }
+    49.945%{
+        background-color: #ffebea;
+        content: "1961";
+    }
+    50.838%{
+        background-color: #ffeae7;
+        content: "1962";
+    }
+    51.731%{
+        background-color: #fee7e0;
+        content: "1963";
+    }
+    52.624%{
+        background-color: #e1e6f9;
+        content: "1964";
+    }
+    53.517%{
+        background-color: #f0f2fe;
+        content: "1965";
+    }
+    54.41%{
+        background-color: #fbfcff;
+        content: "1966";
+    }
+    55.303%{
+        background-color: #fdfeff;
+        content: "1967";
+    }
+    56.196%{
+        background-color: #fafbff;
+        content: "1968";
+    }
+    57.089%{
+        background-color: #fee8e4;
+        content: "1969";
+    }
+    57.982%{
+        background-color: #fff5f3;
+        content: "1970";
+    }
+    58.875%{
+        background-color: #f0f2fe;
+        content: "1971";
+    }
+    59.768%{
+        background-color: #fff8f6;
+        content: "1972";
+    }
+    60.661%{
+        background-color: #ffdad1;
+        content: "1973";
+    }
+    61.554%{
+        background-color: #f1f3ff;
+        content: "1974";
+    }
+    62.447%{
+        background-color: #fefcfd;
+        content: "1975";
+    }
+    63.34%{
+        background-color: #f0f2fe;
+        content: "1976";
+    }
+    64.233%{
+        background-color: #ffd1cb;
+        content: "1977";
+    }
+    65.126%{
+        background-color: #ffd1c9;
+        content: "1978";
+    }
+    66.019%{
+        background-color: #ffcbc0;
+        content: "1979";
+    }
+    66.912%{
+        background-color: #ffc2b5;
+        content: "1980";
+    }
+    67.805%{
+        background-color: #ffb9ad;
+        content: "1981";
+    }
+    68.698%{
+        background-color: #fdd4ce;
+        content: "1982";
+    }
+    69.591%{
+        background-color: #fdd4ce;
+        content: "1983";
+    }
+    70.484%{
+        background-color: #fdd4ce;
+        content: "1984";
+    }
+    71.377%{
+        background-color: #ffdfd8;
+        content: "1985";
+    }
+    72.27%{
+        background-color: #ffcbc0;
+        content: "1986";
+    }
+    73.163%{
+        background-color: #ffa998;
+        content: "1987";
+    }
+    74.056%{
+        background-color: #fcab98;
+        content: "1988";
+    }
+    74.949%{
+        background-color: #ffbbae;
+        content: "1989";
+    }
+    75.842%{
+        background-color: #ff9d8a;
+        content: "1990";
+    }
+    76.735%{
+        background-color: #fea390;
+        content: "1991";
+    }
+    77.628%{
+        background-color: #ffbdb3;
+        content: "1992";
+    }
+    78.521%{
+        background-color: #c2caf9;
+        content: "1993";
+    }
+    79.414%{
+        background-color: #ffb2a2;
+        content: "1994";
+    }
+    80.307%{
+        background-color: #ff9584;
+        content: "1995";
+    }
+    81.2%{
+        background-color: #ffb5a8;
+        content: "1996";
+    }
+    82.093%{
+        background-color: #ff8973;
+        content: "1997";
+    }
+    82.986%{
+        background-color: #ff6e59;
+        content: "1998";
+    }
+    83.879%{
+        background-color: #ff9885;
+        content: "1999";
+    }
+    84.772%{
+        background-color: #ff9e8b;
+        content: "2000";
+    }
+    85.665%{
+        background-color: #fe846c;
+        content: "2001";
+    }
+    86.558%{
+        background-color: #fe7557;
+        content: "2002";
+    }
+    87.451%{
+        background-color: #fc7159;
+        content: "2003";
+    }
+    88.344%{
+        background-color: #ff7b62;
+        content: "2004";
+    }
+    89.237%{
+        background-color: #ff694e;
+        content: "2005";
+    }
+    90.13%{
+        background-color: #ff7457;
+        content: "2006";
+    }
+    91.023%{
+        background-color: #ff7357;
+        content: "2007";
+    }
+    91.916%{
+        background-color: #fe846c;
+        content: "2008";
+    }
+    92.893%{
+        background-color: #ff6f54;
+        content: "2009";
+    }
+    93.702%{
+        background-color: #fd6141;
+        content: "2010";
+    }
+    94.595%{
+        background-color: #fe7c62;
+        content: "2011";
+    }
+    95.488%{
+        background-color: #fc7050;
+        content: "2012";
+    }
+    96.381%{
+        background-color: #ff664a;
+        content: "2013";
+    }
+    97.274%{
+        background-color: #ff5635;
+        content: "2014";
+    }
+    98.167%{
+        background-color: #fe330a;
+        content: "2015";
+    }
+    99%{
+        background-color: #fa2b00;
+        content: "2016";
+    }
+}
