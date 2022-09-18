@@ -45,12 +45,6 @@ Staying in Northeast India, and having seen how climate change has affected our 
 
 ### What it does 
 
-
-
-<p id="gdcalert1" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image1.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-
 The web portal opens up with a loader showing the change in gradual increase mean global temperature. It shows up on the landing page which contains various tid-bits about our project. 
 
 The landing page shows the idea behind our project and charts out what we can show in our project. It shows the changes already caused by climate change in Switzerland as a background for the project.
