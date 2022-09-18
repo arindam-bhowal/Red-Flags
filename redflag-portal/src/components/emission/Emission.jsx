@@ -1,117 +1,144 @@
-import './emission.scss'
 import Sidebar from '../sidebar/Sidebar'
-import axios from 'axios'
+import './emission.scss'
+import cities from '../../Data/cities.json'
 import { useEffect, useState } from 'react'
+
+
+
+// const Emission = () => {
+
+//   const [distance, setDistance] = useState(0)
+//   const [response, setResponse] = useState([])
+//   // const [response, setResponse] = useState([])
+//   const [homeCoords, setHomeCoords] = useState({ lon: 0, lat: 0 })
+//   const [workCoords, setWorkCoords] = useState({ lon: 0, lat: 0 })
+
+//   const [homeLocation, setHomeLocation] = useState('-105.044052,40.5417839')
+//   const [workLocation, setWorkLocation] = useState('-105.434219,41.233714')
+
+
+//   const url = `https://api.mapbox.com/directions-matrix/v1/mapbox/driving/${homeLocation};${workLocation}?sources=0&access_token=pk.eyJ1Ijoic3ByaXRhbiIsImEiOiJjbDd1dGFubTUwNTJ0M3lsaGY1bGNkZ2NsIn0.jWWLPs5fevoroG-O_yAV7g`
+
+//   useEffect(() => {
+//     response && response.map(place=>{
+//       setDistance(distance + place.distance)
+//     })
+//   }, [response])
+
+
+
+//   const handleHomeLocation = (e) => {
+//     setHomeLocation(e.target.value)
+//   }
+
+//   const handleWorkLocation = (e) => {
+//     setWorkLocation(e.target.value)
+//   }
+
+//   const handleSubmit = (e) => {
+//     e.preventDefault()
+//     fetch(url).then(res => res.json()).then((response) => {
+//       setResponse(response.destinations)
+//     })
+//   }
+
+//   const handleCheck = () => {
+//     console.log(distance)
+//   }
+
+
+//   return (
+//     <>
+//       <Sidebar />
+//       <div className='emission'>
+//         {/* https://api.mapbox.com/directions-matrix/v1/mapbox/driving/-105.044052,40.5417839;-105.434219,41.233714?sources=0&access_token=xyz */}
+//         <div className="content">
+//           <form className="form">
+//             <div className="title">
+//               <h1>Check your climate impact!!</h1>
+//               <p>Select locations to get started.</p>
+//             </div>
+//           <div className="inputBox">
+//             <input type="text" placeholder='homeCoordinate' value={homeLocation} onChange={handleHomeLocation} />
+//             <input type="text" placeholder='homeCoordinate' value={workLocation} onChange={handleWorkLocation}/>
+//           </div>
+
+
+//             <div className="next-button">
+//             </div>
+//           </form>
+//               <button className="next" value="submit" onSubmit={handleSubmit}>Lets Start!</button>
+
+//           <div className="checkResult" onClick={handleCheck}>
+//             CheckResults
+//           </div>
+
+//         </div>
+//       </div>
+//     </>
+//   )
+// }
+
+// export default Emission
+
+
+
 
 const Emission = () => {
 
-    // const [response, setResponse] = useState([])
 
-    const url = 'https://api.mapbox.com/directions-matrix/v1/mapbox/driving/-105.044052,40.5417839;-105.434219,41.233714?sources=0&access_token=pk.eyJ1Ijoic3ByaXRhbiIsImEiOiJjbDd1dGFubTUwNTJ0M3lsaGY1bGNkZ2NsIn0.jWWLPs5fevoroG-O_yAV7g'
+  
+  const [homeLocation, setHomeLocation] = useState('-105.044052,40.5417839')
+  const [workLocation, setWorkLocation] = useState('-105.434219,41.233714')
+  
+  const handleHomeChange = (e) => {
+    setHomeLocation(e.target.value)
+  }
+  
+  const handleWorkChange = (e) => {
+    setWorkLocation(e.target.value)
+  }
+  
+  const url = `https://api.mapbox.com/directions-matrix/v1/mapbox/driving/${homeLocation};${workLocation}?sources=0&access_token=pk.eyJ1Ijoic3ByaXRhbiIsImEiOiJjbDd1dGFubTUwNTJ0M3lsaGY1bGNkZ2NsIn0.jWWLPs5fevoroG-O_yAV7g`
 
-    useEffect(() => {
-         fetch(url).then(res => res.json()).then((response)=>{
-            console.log(response)
-         })
-    }, [])
+  return (
+    <>
+      <Sidebar />
+      <div className='emission'>
 
+        <form class="search-form">
+          <div class="input-container">
+            <input type="text" class="search" placeholder="Home City or State" value={homeLocation} onChange={handleHomeChange} />
+            <svg class="spinner" width="65px" height="65px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+              <circle class="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
+            </svg>
+          </div>
+          <div class="suggestions">
+            <ul class="suggestions__list">
+              <li>Filter for a city</li>
+              <li>or a state</li>
+            </ul>
+          </div>
+        </form>
 
-    return (
-        <>
-            <Sidebar />
-            <div className='emission'>
-                {/* https://api.mapbox.com/directions-matrix/v1/mapbox/driving/-105.044052,40.5417839;-105.434219,41.233714?sources=0&access_token=xyz */}
-                <div class ="content">
-    <form class="form">
-    <div class ="title">
-      <h1>Book a Flight</h1>
-        <p>Select locations and dates to get started.</p>
-    </div>
-    <div class="progress">
-      <p>Step 1 of 3</p>
-    <div class="progress-bar">
-      <div class="bar-pink">
-        <p>33%</p>
+        <form class="search-form">
+          <div class="input-container">
+            <input type="text" class="search" placeholder="Work City or State" value={homeLocation} onChange={handleWorkChange} />
+            <svg class="spinner" width="65px" height="65px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+              <circle class="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
+            </svg>
+          </div>
+          <div class="suggestions">
+            <ul class="suggestions__list">
+              <li>Filter for a city</li>
+              <li>or a state</li>
+            </ul>
+          </div>
+        </form>
+        <div className="btn">Calculate Value</div>
       </div>
-     </div>
-    </div>
-    <div class ="categories">
-      <button class="flights button">Flights</button>
-      <button class="Hotels button">Hotels</button>
-      <button class ="Packages button">Packages</button>
-    </div>
-   <div class="row1">
-    <div class="locations from-location1">
-     <label class="from-location2" htmlFor="from">From:</label>
-      <select class="from">
-        <option value="England">Australia</option>
-        <option value="England">Asgard</option>
-        <option value="England">Brazil</option>
-        <option value="England">Burma</option>
-        <option value="England">Burundi</option>
-        <option value="England">China</option>
-        <option value="England">Congo</option>
-        <option value="England">Dominican Republic</option>
-        <option value="England">England</option>
-        <option value="England">El Salvador</option>
-        <option value="England">Ethiopia</option>
-        <option value="India">India</option>
-        <option value="England">Iraq</option>
-        <option value="Italy">Italy</option>
-        <option value="England">Japan</option>
-        <option value="England">Russia</option>
-        <option value="England">Somalia</option>
-        <option value="England">Syria</option>
-        <option value="United States">United States</option>
-        <option value="England">Yemen</option>
-        <option value="Wakanda">Wakanda</option>
-      </select>
-    </div>
-    <div class="locations to-location1">
-      <label class="to-location2" htmlFor="to">To:</label>
-      <select class="to">
-       <option value="England">Australia</option>
-        <option value="England">Asgard</option>
-        <option value="England">Brazil</option>
-        <option value="England">Burma</option>
-        <option value="England">Burundi</option>
-        <option value="England">China</option>
-        <option value="England">Congo</option>
-        <option value="England">Dominican Republic</option>
-        <option value="England">England</option>
-        <option value="England">El Salvador</option>
-        <option value="England">Ethiopia</option>
-        <option value="India">India</option>
-        <option value="England">Iraq</option>
-        <option value="Italy">Italy</option>
-        <option value="England">Japan</option>
-        <option value="England">Russia</option>
-        <option value="England">Somalia</option>
-        <option value="England">Syria</option>
-        <option value="United States">United States</option>
-        <option value="England">Yemen</option>
-        <option value="Wakanda">Wakanda</option>
-      </select>
-    </div>
-  </div>
-    <div class="row2">
-      <div class="dates depart">
-        <label class="depart-date" htmlFor="depart">Depart:</label>
-        <input class="departure-date" type="date"></input>
-      </div>
-      <div class="dates return">
-        <label class="returning-date" htmlFor="return">Return:</label>
-        <input class="return-date" type="date"></input>     
-      </div>
-    </div>
-    <div class="next-button">
-    <button class="next" value="submit">Let's Fly!</button>
-      </div>
-    </form>
-  </div>
-            </div>
-        </>
-    )
+    </>
+  )
 }
 
 export default Emission

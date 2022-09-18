@@ -22,6 +22,7 @@ const Start = () => {
         <Sidebar />
         <Intro>
             <h1>Climate Quiz</h1>
+            <h3>Check Your Climate Awareness Score!!</h3>
             <h4>Are you ready to join?</h4>
             <Button onClick={( )=> {navigate(`/startQuiz`)}} css={btnCSS}>Begin</Button>
         </Intro>

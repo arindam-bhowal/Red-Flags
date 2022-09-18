@@ -18,7 +18,8 @@ const GameOver = ({ pts }) => {
     return (
         <>
             <Title>Game Over</Title>
-            <Points>You did {pts} out of 25!</Points>
+            <Points>You did {pts/5} out of 5!</Points>
+            <Points>Average Score for Switzerland 3.29 ({`According to Yale & Meta`}) </Points>
             <Button onClick={refreshPage}>Retry</Button>
         </>
     )

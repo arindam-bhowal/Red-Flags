@@ -26,7 +26,7 @@ function ControlPanel(props) {
   return (
     <div className="control-panel">
       <div className="locationInfo">
-        <h3>Location Info</h3>
+        <h3>Location of Marker Info</h3>
         <div>
           {eventNames.map(eventName => {
             const { events = {} } = props
@@ -82,11 +82,11 @@ function ControlPanel(props) {
                 label={<strong>"Time Period"</strong>}
                 onChange={(e) => { setTimePeriod(e.target.value) }}
               >
-                <MenuItem value="Hist">HIST (1981- 2000)</MenuItem>
-                <MenuItem value="Current">CURRENT (2001- 2020)</MenuItem>
-                <MenuItem value="Near Future">NEAR FUTURE (2021- 2040)</MenuItem>
-                <MenuItem value="Mid Future">MID FUTURE (2041- 2060)</MenuItem>
-                <MenuItem value="Far Future">FAR FUTURE (2061- 2080)</MenuItem>
+                <MenuItem value="Hist">HIST </MenuItem>
+                <MenuItem value="Current">CURRENT</MenuItem>
+                <MenuItem value="Near Future">NEAR FUTURE </MenuItem>
+                <MenuItem value="Mid Future">MID FUTURE</MenuItem>
+                <MenuItem value="Far Future">FAR FUTURE</MenuItem>
               </Select>
             </FormControl>
           </Box>
@@ -98,17 +98,17 @@ function ControlPanel(props) {
         <div className="input">
           <Box sx={{ minWidth: 120 }} style={{ marginTop: '15px' }}>
             <FormControl fullWidth>
-              <InputLabel id="demo-simple-select-label-rcp">RCP Senerios</InputLabel>
+              <InputLabel id="demo-simple-select-label-rcp">SCENARIOS</InputLabel>
               <Select
                 labelId="demo-simple-select-label-rcp"
                 id="demo-simple-select-rcp"
                 value={props.rcpSenerios}
-                label={<strong>"RCP Senerios"</strong>}
+                label={<strong>"RCP SCENARIOS"</strong>}
                 onChange={(e) => { props.setRcpSenerios(e.target.value)}}
               >
-                <MenuItem value="rcp 2.6">RCP 2.6</MenuItem>
-                <MenuItem value="rcp 4.5">RCP 4.5</MenuItem>
-                <MenuItem value="rcp 8.5">RCP 8.5</MenuItem>
+                <MenuItem value="rcp 2.6">Concerted Mitigation Efforts (RCP 2.6)</MenuItem>
+                <MenuItem value="rcp 4.5">Limited Mitigation Efforts(RCP 4.5)</MenuItem>
+                <MenuItem value="rcp 8.5">No Mitigation Efforts (RCP 8.5)</MenuItem>
               </Select>
             </FormControl>
           </Box>
@@ -124,6 +124,7 @@ function ControlPanel(props) {
             <FormControlLabel control={<Checkbox onChange={e => layer.setPopulation(!layer.population)} />} label="Population" />
             <FormControlLabel control={<Checkbox onChange={e => layer.setPrecipitation(!layer.precipitation)} />} label="Preipitation" />
             <FormControlLabel control={<Checkbox onChange={e => layer.setTmax(!layer.tmax)} />} label="Tmax" />
+            {/* <FormControlLabel control={<Checkbox onChange={e => layer.setTropicalNights(!layer.tropicalNights)} />} label="Tropical Nights" /> */}
           </FormGroup>
         </div>
       </div>

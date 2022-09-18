@@ -27,6 +27,7 @@ export default function BaseMap() {
   const [population, setPopulation] = useState(false)
   const [precipitation, setPrecipitation] = useState(false)
   const [tmax, setTmax] = useState(false)
+  const [tropicalNights, setTropicalNights] = useState(false)
 
   const [markerCoords, setmarkerCoords] = useState({ lon: '', lat: '' })
 
@@ -109,6 +110,18 @@ export default function BaseMap() {
       rcp85_mid_future: "mapbox://styles/arindambhowal/cl86fegao001315qvl54tq9hp",
       rcp85_far_future: "mapbox://styles/arindambhowal/cl86fbi6x001114nm5ckkjbj8"
     },
+    tropicalNightsStyles: {
+      current: "",
+      rcp45_near_future: "",
+      rcp45_mid_future: "",
+      rcf45_far_future: "",
+      rcp26_near_future: "",
+      rcp26_mid_future: "",
+      rcp26_far_future: "",
+      rcp85_near_future: "",
+      rcp85_mid_future: "",
+      rcp85_far_future: ""
+    },
     baseStyle: "mapbox://styles/mapbox/streets-v11"
   }
 
@@ -120,7 +133,7 @@ export default function BaseMap() {
         initialViewState={{
           latitude: 47.373878,
           longitude: 8.545094,
-          zoom: 6,
+          zoom: 7,
         }}
         style={{ height: '100vh' }}
         // mapStyle="mapbox://styles/mapbox/dark-v9"
@@ -208,7 +221,9 @@ export default function BaseMap() {
           'precipitation': precipitation,
           'setPrecipitation': setPrecipitation,
           'tmax': tmax,
-          'setTmax': setTmax
+          'setTmax': setTmax,
+          'tropicalNights': tropicalNights,
+          'setTropicalNights': setTropicalNights
         }}
       />
 

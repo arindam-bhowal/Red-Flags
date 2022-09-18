@@ -48,7 +48,7 @@ const Chart = () => {
                 <div className="heading">
                     <h2>Graphs</h2>
 
-                    <p>Climate Report for Swiss cities with more than 100,000 residents</p>
+                    <p>Climate Report for major swiss cities</p>
                 </div>
     
     <div style={{display: 'flex', alignItems:'center', justifyContent: 'center'}}>
@@ -88,7 +88,7 @@ const Chart = () => {
 
                 <div className="graph">
                     <LineChart
-                        width={800}
+                        width={1200}
                         height={450}
                         data={city==='zurich' ? zurich : city==='lausanne' ? lausanne : city==='geneva' ? geneva : city==='bern' ? bern : basel }
                         margin={{
