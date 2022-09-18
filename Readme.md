@@ -70,6 +70,8 @@ Access via our Github
 * And to start the server “npm run start”
 * To get the full experience open index.html at the root of the repo.
 
+**Note**: We have added our mapbox api for the time being for ease of access we will deleting the key after the time period of the hackathon so if seeing this after 19th september 2020 kindly chabge the mapbox api key with your own.
+
 
 ### How we built it 
 
