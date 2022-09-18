@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Sidebar from '../sidebar/Sidebar'
 import './chart.scss'
 import Radio from '@mui/material/Radio';
@@ -22,6 +22,9 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 
+import Stack from '@mui/material/Stack';
+import Button from '@mui/material/Button';
+
 import zurich from '../../Data/tropical nights/Zurich_tropical_nights_hot_days.json'
 import lausanne from '../../Data/tropical nights/Lausanne_tropical_nights_hot_days.json'
 import geneva from '../../Data/tropical nights/Geneva_tropical_nights_hot_days.json'
@@ -36,6 +39,7 @@ const Chart = () => {
     const handleChange = (event) => {
         setParameter(event.target.value);
     };
+    
 
     return (
         <>
@@ -46,18 +50,21 @@ const Chart = () => {
 
                     <p>Climate Report for Swiss cities with more than 100,000 residents</p>
                 </div>
-                <FormControl>
-      <FormLabel id="demo-radio-buttons-group-label">Gender</FormLabel>
-      <RadioGroup
-        aria-labelledby="demo-radio-buttons-group-label"
-        defaultValue="female"
-        name="radio-buttons-group"
-      >
-        <FormControlLabel value="female" control={<Radio />} label="Female" />
-        <FormControlLabel value="male" control={<Radio />} label="Male" />
-        <FormControlLabel value="other" control={<Radio />} label="Other" />
-      </RadioGroup>
-    </FormControl>
+    
+    <div style={{display: 'flex', alignItems:'center', justifyContent: 'center'}}>
+
+ 
+        <Stack spacing={2} direction="row" >
+
+      <Button variant="contained" onClick={() => setCity('zurich')}>zurich</Button>
+      <Button variant="contained" onClick={() => setCity('lausanne')}>lausanne</Button>
+      <Button variant="contained" onClick={() => setCity('geneva')}>geneva</Button>
+      <Button variant="contained" onClick={() => setCity('bern')}>bern</Button>
+      <Button variant="contained" onClick={() => setCity('basel')}>basel</Button>
+      
+    </Stack>
+    </div>
+
 
                 <div className="select">
                 <Box sx={{ minWidth: 120 }}>
@@ -83,7 +90,7 @@ const Chart = () => {
                     <LineChart
                         width={800}
                         height={450}
-                        data={zurich}
+                        data={city==='zurich' ? zurich : city==='lausanne' ? lausanne : city==='geneva' ? geneva : city==='bern' ? bern : basel }
                         margin={{
                             top: 5,
                             right: 30,
